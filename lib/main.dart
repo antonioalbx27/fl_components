@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       //home: Listview2Screen(),
       initialRoute: AppRoutes.initialRoutes, //con esto le pasamos el nombre de la ruta, que lo suyo esque la primera sea la de home
-      routes: AppRoutes.routes, //cierre routes
+      routes: AppRoutes.getAppRoutes(), //cierre routes
       onGenerateRoute: AppRoutes.onGenerateRoute//con esto evitamos errores a la hora de llamarlos con el pushName
     );
   } // cierre widget
