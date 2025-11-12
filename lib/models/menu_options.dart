@@ -15,3 +15,13 @@ class MenuOption{
   
   
 }
+class MenuBlack{
+  final String route;
+  final String name;
+  final Widget screen;
+
+  MenuBlack({
+    required this.route,  
+    required this.name, 
+    required this.screen});
+}

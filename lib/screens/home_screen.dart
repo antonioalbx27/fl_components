@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
               //Navigator.push(context, route); //con esto le digo que me pinga la screen seleciconada, hay mas opciones que el push
               //Navigator.pushReplacement(context, route); //con este no te deja ir para atras, destruyendo la ruta anterior
               Navigator.pushNamed(context, AppRoutes.MenuOptions[index].route);//en lugar de establecer la ruta como lo hemos hecho, le pongo el nombre directamente o
-              //en esre caso loq ue ahce es directamente llevarme a la ruta en cuanto le toco
+              //en este caso loq ue ahce es directamente llevarme a la ruta en cuanto le toco
           },
           ),
        separatorBuilder: (context, index ) => Divider(), 

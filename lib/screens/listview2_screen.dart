@@ -1,3 +1,5 @@
+import 'package:fl_components/routes/app_routes.dart';
+import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class Listview2Screen extends StatelessWidget {
@@ -20,22 +22,21 @@ class Listview2Screen extends StatelessWidget {
       body: ListView.separated(
         itemBuilder: (context, index) => ListTile(
           trailing: Icon(Icons.arrow_forward_ios_outlined),
-          title: Text(options[index]),
+          title: Text(AppRoutes.MenuBlacks[index].name),
           onTap: () {
             //para que le puedas pinchar y cuando le pinche; por consola me muestra un texto de lo que he pinchado
-            final poder = options[index];
-            print(poder);
+            //final poder = options[index];
+            Navigator.pushNamed(context, AppRoutes.MenuBlacks[index].route);
+           
           },
         ),
         //con el context index va pasando por el array cada elemento que contenga
         //le digo que me devuleva el listtile para que sea una lista y le meto el trailing un icono
         //y en el title hago un
         //text option que me devuelva un texto con lo que hay dentro del array
-        separatorBuilder: (context, index) =>
-            const Divider(), //el divider es un elemnto que no va a cambiar y se le suele poner const; pero
+        separatorBuilder: (context, index) => Divider(), //el divider es un elemnto que no va a cambiar y se le suele poner const; pero
         //no hace falta
-        itemCount: options
-            .length, //con esto le digo cuantos elementos hay en el array si son 10, 20
+        itemCount: AppRoutes.MenuBlacks.length, //con esto le digo cuantos elementos hay en el array si son 10, 20
       ),
 
       /*children: [
