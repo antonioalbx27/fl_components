@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomCardTipo2 extends StatelessWidget {
-  const CustomCardTipo2({super.key});
+
+  final String imageURL;
+  final String nameCharacter;
+
+  const CustomCardTipo2({super.key, required this.imageURL, required this.nameCharacter});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +20,7 @@ class CustomCardTipo2 extends StatelessWidget {
           FadeInImage(
             //foto buscada en internet
             image: NetworkImage(
-              'https://gaming-cdn.com/images/products/2419/orig/batman-arkham-knight-pc-juego-steam-cover.jpg?v=1703252478.jpg',
+             imageURL,
             ),
             //por si la foto no carga; ponemos un gif(o otra cosa) descargada del pc hasta que cargue
             placeholder: AssetImage('assets/batman-arkham.gif'),
@@ -27,10 +31,11 @@ class CustomCardTipo2 extends StatelessWidget {
             //tiempo en el que tarda en cargarse el cambio a la foto
             fadeInDuration: Duration(milliseconds: 500),
           ),
+          if (nameCharacter!= null)
           Container(
             alignment: AlignmentDirectional.centerEnd,
             padding: EdgeInsets.only(top: 10, bottom: 10, right: 20),
-            child: Text('Batman Arkham Khight'),
+            child: Text(nameCharacter ?? 'Desconodido'),
           ),
 
           //https://i.imgur.com/Jf2UjMi.jpeg
