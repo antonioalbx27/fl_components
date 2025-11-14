@@ -17,6 +17,8 @@ class CustomCardTipo2 extends StatelessWidget {
             height: 260,
             //fit recorta la imagen; o recortas o deformas
             fit: BoxFit.cover,
+            //tiempo en el que tarda en cargarse el cambio a la foto
+            fadeInDuration: Duration(milliseconds: 500),
             )
             
             //https://i.imgur.com/Jf2UjMi.jpeg
