@@ -38,6 +38,7 @@ class AppRoutes {
       name: 'alertscreen',
       screen: const AlertScreen(),
     ),
+    
   ];
   static final MenuBlacks = <MenuBlack>[
     MenuBlack(
