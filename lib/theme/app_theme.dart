@@ -14,6 +14,24 @@ class AppTheme {//aqui es donde vamos a poner todos nuestros diseños y asi ahor
         listTileTheme: ListTileThemeData(//con esto cambio el tema de la lista
           iconColor: primary,
         ),
+ 
+ //colores para los botones de la aplicacion
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(foregroundColor: AppTheme.primary)
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: primary,
+      foregroundColor: Colors.white,
+      elevation: 5
+      ),
+
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          foregroundColor: AppTheme.primary,
+          //shape: StadiumBorder(), //modifica la forma
+          shadowColor: Colors.indigo //dale sombreado
+          ),
+      )
  );//cierre theme dark
 
 }
